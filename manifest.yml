@@ -1,0 +1,10 @@
+---
+applications:
+- domain: mybluemix.net
+  path: .
+  memory: 128M
+  host: YummyPicker
+  name: YummyPicker
+  command: node app.js
+  disk: 256M
+  instances: 1

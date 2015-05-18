@@ -1,0 +1,52 @@
+extends layout
+
+block header
+	include header
+	
+block content
+	div.container
+		br
+		div.well
+			h3.text-center
+				| Enter the item you want to add to your wish list
+			// form(role='form',action='/action/addItem', method='post')
+			form(role='form',action='/wishlist/item', method='post')
+				.form-group
+					label(for='item') Item Name
+					input#item.form-control(name='item',type='text', placeholder='Enter the item name here')
+				.form-group
+					label(for='url') Item URL
+					input#url.form-control(name='url', type='url', placeholder='Enter the URL of the item here: e.g  http://yummyration-{your-unique-id}.mybluemix.net/menuitem/d404')
+				button.btn.btn-primary(type='submit') Add to Wish List
+		br
+		br
+		br
+		div.well
+			h1.text-center
+				span.glyphicon.glyphicon-list
+				|   Your Wish List
+			table.table.table-bordered.table-hover
+				thead
+					tr
+						th Name
+						th url
+						th Price
+						th Rating
+						th
+						th
+				tbody
+					each item in inventory
+						tr.info
+							td
+								b
+									| #{item.item}
+							td
+								| #{item.url}
+							td
+								| #{item.price}
+							td
+								| #{item.rating}
+							td
+								a.btn.btn-xs.btn-primary(href='/wishlist/#{item._id}', role='button') Get more info
+							td
+								a.btn.btn-xs.btn-warning(href='/action/removeItem/#{item._id}', role='button') Remove from wish list

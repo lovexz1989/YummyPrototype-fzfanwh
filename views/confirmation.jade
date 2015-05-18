@@ -1,0 +1,17 @@
+extends layout
+
+block header
+	include header
+	
+block content
+	div.container
+		br
+		.jumbotron
+			br
+			h1 New Item Saved!
+				br
+				p
+					br
+					| The item has been successfully added to your wishlist
+				p
+					a.btn.btn-success.btn-lg(href='/action/wishlist', role='button') Go to Wishlist »

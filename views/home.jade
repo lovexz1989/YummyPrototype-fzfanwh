@@ -1,0 +1,23 @@
+extends layout
+
+block header
+	include header
+	
+block content
+	div.container
+		div.well
+			h1.text-center
+				span.glyphicon.glyphicon-home
+				|     Yummy Picker
+			br
+			br
+			h4.text-center
+				| Before you access the wishlist, you need to add a Data Management service (MongoLab) to your application.
+				br
+				| If you click the button below before adding the MongoLab service, you will receive a server error (500).
+				br
+				br
+				br
+				a.btn.btn-default.btn-lg(href='/wishlist', role='button') 
+					span.glyphicon.glyphicon-list
+					|     Go to your Wish List
