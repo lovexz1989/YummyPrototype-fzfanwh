@@ -8,3 +8,8 @@ applications:
   command: node app.js
   disk: 256M
   instances: 1
+  
+declared-services:
+  mongolab-db-sample-prototype:
+    label: mongolab
+    plan:  sandbox
