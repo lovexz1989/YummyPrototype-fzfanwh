@@ -8,7 +8,9 @@ block content
 		br
 		div.well
 			h3.text-center
-				| Enter the item you want to add to your wish list
+				| Prototype: Enter the item you want to add to your wish list
+				br
+				| (Item name + valid URL)
 			// form(role='form',action='/action/addItem', method='post')
 			form(role='form',action='/wishlist/item', method='post')
 				.form-group
@@ -16,8 +18,8 @@ block content
 					input#item.form-control(name='item',type='text', placeholder='Enter the item name here')
 				.form-group
 					label(for='url') Item URL
-					input#url.form-control(name='url', type='url', placeholder='Enter the URL of the item here: e.g  http://yummyration-{your-unique-id}.mybluemix.net/menuitem/d404')
-				button.btn.btn-primary(type='submit') Add to Wish List
+					input#url.form-control(name='url', type='url', placeholder='Enter the URL of the item here: e.g  http://yummyration.mybluemix.net/menuitem/d404')
+				button.btn.btn-warning(type='submit') SAVE TO DATABASE
 		br
 		br
 		br
@@ -30,23 +32,14 @@ block content
 					tr
 						th Name
 						th url
-						th Price
-						th Rating
-						th
 						th
 				tbody
 					each item in inventory
-						tr.info
+						tr.warning
 							td
 								b
 									| #{item.item}
 							td
 								| #{item.url}
 							td
-								| #{item.price}
-							td
-								| #{item.rating}
-							td
-								a.btn.btn-xs.btn-primary(href='/wishlist/#{item._id}', role='button') Get more info
-							td
-								a.btn.btn-xs.btn-warning(href='/action/removeItem/#{item._id}', role='button') Remove from wish list
+								a.btn.btn-xs.btn-danger(href='/action/removeItem/#{item._id}', role='button') Remove from database

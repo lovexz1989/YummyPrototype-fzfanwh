@@ -9,9 +9,9 @@
   "dependencies": {
 	"request": "~2.27.0",
 	"express": "3.2.6 ",
-	"mongodb":"*",
     "jade": "~1.3.0",
-    "restler": "~3.2.2"
+    "restler": "~3.2.2",
+    "cloudant": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.x",

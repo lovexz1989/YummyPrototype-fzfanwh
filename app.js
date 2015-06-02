@@ -31,17 +31,17 @@ if ('development' === app.get('env')) {
 
 // Defines the routes for the app
 app.get('/', routes.home);
+
+
 app.get('/wishlist', routes.items);
 
 app.post('/wishlist/item', routes.addItem);
-app.get('/wishlist/:id', routes.getRemoteInfo);
 
 
 app.get('/action/removeItem/:id', routes.removeItem);
 
 
-// Route for Dev and tests
-//app.get('/TEST/:id', routes.removeItem);
+
 
 
 
