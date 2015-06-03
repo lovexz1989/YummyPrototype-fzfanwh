@@ -13,6 +13,3 @@ declared-services:
   cloudantdb-sample-prototype:
     label: cloudantNoSQLDB
     plan: Shared
-  monitoring-prototype:
-    label: MonitoringAndAnalytics
-    plan: Free
