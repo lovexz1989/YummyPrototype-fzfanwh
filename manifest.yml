@@ -10,6 +10,6 @@ applications:
   instances: 1
   
 declared-services:
-  cloudantdb-sample-prototype:
+  sample-java-cloudant-cloudantNoSQLDB:
     label: cloudantNoSQLDB
     plan: Shared
