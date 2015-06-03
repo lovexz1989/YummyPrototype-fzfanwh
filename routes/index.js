@@ -56,7 +56,7 @@ exports.items = function (req, res) {
     
     db.list(function(err, docs) {
     	if (!err) {
-    		var len = docs.rows.length;
+			var len = docs.rows.length;
 			console.log('total # of docs -> '+len);
 			if(len !== 0) {
 				var docList = [];
@@ -81,7 +81,7 @@ exports.items = function (req, res) {
 					
 				});
 			}
-    	}
+		}
     });
 };
 
@@ -114,16 +114,16 @@ exports.removeItem = function(req, res) {
      console.log("Removing an item");
      var itemId = req.params.id;
         
-	 db.get(itemId, { revs_info: true }, function(err, doc) {
+	db.get(itemId, { revs_info: true }, function(err, doc) {
 			if (!err) {
 				db.destroy(doc._id, doc._rev, function (err, result) {
-				     // Handle response
-					 if(err) {
-						 console.log(err);
-						 res.send(500);
-					 } else {
-						 res.redirect('/wishlist');
-					 }
+					// Handle response
+					if(err) {
+						console.log(err);
+						res.send(500);
+					} else {
+						res.redirect('/wishlist');
+					}
 				});
 			}
 		});

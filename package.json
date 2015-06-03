@@ -1,8 +1,8 @@
 {
-  "name":"YummyPicker",
+  "name":"YummyShopping",
   "version": "0.0.1",
   "private": true,
-  "description": "YummyPicker app",
+  "description": "YummyShopping app",
   "scripts": {
     "start": "node app.js"
   },
