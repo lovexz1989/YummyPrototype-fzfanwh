@@ -55,7 +55,7 @@ exports.items = function (req, res) {
     console.log("Listing item");
     
     db.list(function(err, docs) {
-    	if (!err) {
+		if (!err) {
 			var len = docs.rows.length;
 			console.log('total # of docs -> '+len);
 			if(len !== 0) {
