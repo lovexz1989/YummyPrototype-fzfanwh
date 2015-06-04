@@ -9,9 +9,10 @@ var rest = require('restler');
 
 
 var dbCredentials = {
-	dbName : 'my_sample_db'
+	dbName : 'my_yummy_shopping_db'
 };
 var cloudant;
+var db;
 
 
 function initDBConnection() {
