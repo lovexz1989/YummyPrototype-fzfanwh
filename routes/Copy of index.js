@@ -7,7 +7,7 @@
 // Use rester for REST API calls
 var rest = require('restler');
 
-/*
+
 var dbCredentials = {
 	dbName : 'my_sample_db'
 };
@@ -39,7 +39,7 @@ function initDBConnection() {
 
 
 initDBConnection();
-*/
+
 
 
 
@@ -49,7 +49,7 @@ exports.home = function(req, res) {
 };
 
 
-/*
+
 // Display the wishlist
 exports.items = function (req, res) {
     console.log("Listing item");
@@ -129,6 +129,6 @@ exports.removeItem = function(req, res) {
 		});
 };
 
-*/
+
 
 
