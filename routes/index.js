@@ -83,6 +83,11 @@ exports.items = function (req, res) {
 					});
 					
 				});
+			} else {
+				console.log("++++++++++++ EMPTY DB");
+				res.render('wishlist', {
+					inventory : []
+				});
 			}
 		}
     });
