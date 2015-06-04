@@ -32,6 +32,7 @@ if ('development' === app.get('env')) {
 // Defines the routes for the app
 app.get('/', routes.home);
 
+/*
 
 app.get('/wishlist', routes.items);
 
@@ -41,7 +42,7 @@ app.post('/wishlist/item', routes.addItem);
 app.get('/action/removeItem/:id', routes.removeItem);
 
 
-
+*/
 
 
 
