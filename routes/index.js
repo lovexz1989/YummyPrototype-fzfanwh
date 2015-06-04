@@ -51,7 +51,7 @@ exports.home = function(req, res) {
 };
 
 
-/*
+
 // Display the wishlist
 exports.items = function (req, res) {
     console.log("Listing item");
@@ -131,6 +131,6 @@ exports.removeItem = function(req, res) {
 		});
 };
 
-*/
+
 
 
