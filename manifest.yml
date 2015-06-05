@@ -8,8 +8,3 @@ applications:
   command: node app.js
   disk: 128M
   instances: 1
-  
-declared-services:
-  sample-java-cloudant-cloudantNoSQLDB:
-    label: cloudantNoSQLDB
-    plan: Shared
