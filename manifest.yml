@@ -1,5 +1,7 @@
 ---
 applications:
+- services:
+  - sample-yummy-cloudant-cloudantNoSQLDB
 - domain: mybluemix.net
   path: .
   memory: 128M
